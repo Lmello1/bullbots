@@ -1,0 +1,25 @@
+@font-face {
+font-family: "robot";
+src: url("../src/robot.ttf");
+}
+h1 {
+font-family:robot;
+font-weight:normal;
+font-size:50;
+font-style:bold;
+}
+td {
+font-family:robot;
+font-weight:normal;
+font-size:30;
+font-style:normal;
+}
+a {
+font-family:robot;
+font-weight:normal;
+font-size:30;
+font-style:normal;
+}
+table, th, td {
+    border: 1px solid black;
+  }
