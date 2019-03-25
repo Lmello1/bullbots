@@ -45,8 +45,6 @@ probably just mess around in the code
 
 just go to the add data and input the password that you set for it
 
-
-
 ## Authors
 
 * devin
@@ -66,3 +64,5 @@ we dont got a liscense lol
 * you
 * use
 * this
+
+* also the blue alliance
