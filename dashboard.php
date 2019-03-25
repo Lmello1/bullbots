@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <center>
-    <h1>Welcome to the bullbots live dashboard</h1>
+    <h1>Welcome to the Bullbots live dashboard</h1>
     <h3>The only place for LIVE bullbots updates</h3>
 </head>
 <body>
-    <p>The bullbots are currently ranked number [number] out of [number] in the idaho reginal</p>
-    <p>Our next match is agenst teams [team1][team2][team3] in match number [matchnumber] at [time]</p>
-    <p>We are on day [day] of 3 of compotition</p>
+    <p>The Bullbots are currently ranked number [number] out of [number] in the idaho regional</p>
+    <p>Our next match is against teams [team1][team2][team3] in match number [matchnumber] at [time]</p>
+    <p>We are on day [day] of 3 of competition</p>
     <h3>Stats at a glance</h3>
     <table>
     <tr>
@@ -66,7 +66,7 @@ echo $win + $losses + $ties;
         <td>1</td>
     </tr>
     <tr>
-        <td>ranking points</td>
+        <td>Ranking points</td>
         <td>4</td>
     </tr>
     </table>
