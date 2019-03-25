@@ -20,7 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <a href = "welcome.php"> Back </a>
 <br>
 <br>
-<a href = "livedashboard.html"> View the Bullbots live dashboard </a>
+<a href = "dashboard.php"> View the Bullbots live dashboard </a>
 <br>
 <br>
 <a href = "passwordmatchdata.html"> Input match data</a>
