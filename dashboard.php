@@ -9,12 +9,6 @@
     <h3>The only place for LIVE bullbots updates</h3>
 </head>
 <body>
-<?php
-require_once('../mysqli_connect.php');
-
-$query = 'SELECT COUNT(SELECT * FROM performances p LEFT JOIN matches m ON m.MatchNum = p.MatchID WHERE p.TeamNum = 1891 AND (m.Color = "blue" AND m.BlueScore > m.RedScore) OR (m.Color="red" AND m.RedScore > m.BlueScore))'
-
-?>
     <p>The bullbots are currently ranked number [number] out of [number] in the idaho reginal</p>
     <p>Our next match is agenst teams [team1][team2][team3] in match number [matchnumber] at [time]</p>
     <p>We are on day [day] of 3 of compotition</p>
@@ -22,12 +16,49 @@ $query = 'SELECT COUNT(SELECT * FROM performances p LEFT JOIN matches m ON m.Mat
     <table>
     <tr>
         <td>Win/Loss/tie</td>
-        <td>5/0/0</td>
+	<td>
+<?php
+require_once('../mysqli_connect.php');
+
+$winQuery = 'SELECT COUNT(*) wins FROM matches m LEFT JOIN performances p ON m.MatchNum = p.MatchID WHERE p.TeamNum = 1891 AND ((p.Color="red" AND m.RedScore > m.BlueScore) OR (p.Color="blue" AND m.BlueScore > m.RedScore))';
+
+$winResponse = @mysqli_query($dbc, $winQuery);
+
+if($winResponse){
+	while($row = mysqli_fetch_array($winResponse)){
+		$wins = $row['wins'];
+		echo $wins . '/';
+	}
+}
+
+$loseQuery = 'SELECT COUNT(*) losses FROM matches m LEFT JOIN performances p ON m.MatchNum = p.MatchID WHERE p.TeamNum = 1891 AND ((p.Color="red" AND m.RedScore < m.BlueScore) OR (p.Color="blue" AND m.BlueScore < m.RedScore))';
+$loseResponse = @mysqli_query($dbc, $loseQuery);
+
+if($loseResponse){
+	while($row = mysqli_fetch_array($loseResponse)){
+		$losses = $row['losses'];
+		echo $losses . '/';
+	}
+}
+
+$tieQuery = 'SELECT COUNT(*) ties FROM matches m LEFT JOIN performances p ON m.MatchNum = p.MatchID WHERE p.TeamNum = 1891 AND ((p.Color="red" AND m.RedScore = m.BlueScore) OR (p.Color="blue" AND m.BlueScore = m.RedScore))';
+$tieResponse = @mysqli_query($dbc, $tieQuery);
+
+if($tieResponse){
+	while($row = mysqli_fetch_array($tieResponse)){
+		$ties = $row['ties'];
+		echo $ties;
+	}
+}
+?>
+    </td>
     </tr>
     <br>
     <tr>
         <td>Matches played</td>
-        <td>5</td>
+<?php
+echo $win + $losses + $ties;
+?>
     </tr>
     <br>
     <tr>
