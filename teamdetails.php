@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
-
+<center>
 <link rel="stylesheet" href="css/jordan.css">
 <?php
 
@@ -56,3 +56,4 @@ mysqli_close($dbc);
 }
 ?>
 <a href = "index.php"> Back </a>
+</center>
