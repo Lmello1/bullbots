@@ -10,6 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 ?>
 
 <head>
+<center>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <h1>All teams</h1>
@@ -23,13 +24,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <a href = "dashboard.php"> View the Bullbots live dashboard </a>
 <br>
 <br>
-<a href = "passwordmatchdata.html"> Input match data</a>
+<a href = "addmatches.php"> Input match data</a>
 <br>
 <br>
 <a href = "matches.html"> View matches</a>
 <br>
 <br>
-<a href = "passwordpage.html"> Input team data</a>
+<a href = "editteams.php"> Input team data</a>
 <br>
 <br>
 <a href = "https://github.com/Lmello1/bullbots"> We have a git repo </a>
@@ -59,4 +60,5 @@ mysqli_close($dbc);
 ?>
 <br>
 <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click here to delete all data </a>
+</center>
 </body>
