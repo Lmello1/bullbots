@@ -57,4 +57,6 @@ if($response){
 mysqli_close($dbc);
 
 ?>
+<br>
+<a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click here to delete all data </a>
 </body>
