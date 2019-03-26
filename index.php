@@ -23,16 +23,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <br>
   <a href = "dashboard.php">Dashboard </a>
   <br>
-<br>
+  <br>
   <a href = "addmatches.php"> Add Match Data</a>
   <br>
-<br>
+  <br>
   <a href = "matches.html"> View Matches</a>
   <br>
-<br>
+  <br>
   <a href = "editteams.php"> Add Team Data</a>
   <br>
-<br>
+  <br>
   <a href = "addteam.php"> Add Team</a>
   <br>
   <br>

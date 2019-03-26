@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<form action="" method="post">
+<form action="/addteams.php" method="post">
   Team Number:<br>
   <input type="number" name="teamNum"><br>
   Team Name:<br>
@@ -26,6 +26,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <input type="submit" value="submit" name="submit">
 </form>
 <br>
+
 <a href = "index.php"> Back </a>
 </center>
 </body>
