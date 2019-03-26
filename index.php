@@ -38,32 +38,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <br>
   <a href = "https://github.com/Lmello1/bullbots"> GitHub </a>
   <br>
+  <br>
+  <a href = "teams.php">View teams</a>
+  <br>
 <br>
-<?php
-
-require_once('../../mysqli_connect.php');
-
-$query = "SELECT TeamName, TeamNum FROM teams";
-
-$response = @mysqli_query($dbc, $query);
-
-if($response){
-	echo '<table>';
-	while($row = mysqli_fetch_array($response)){
-		echo '<tr><td><a href = "./teamdetails.php?teamNum='. $row['TeamNum'] .'">' .
-		$row['TeamNum']. '    '.
-		$row['TeamName']. '</a></td></tr>';
-	}
-	echo '</table>';
-}else{
-	echo "Couldn't issue database query";
-	echo mysqli_error($dbc);
-}
-
-mysqli_close($dbc);
-
-?>
-<br>
-<a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click here to delete all data </a>
 </center>
 </body>
