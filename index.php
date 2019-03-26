@@ -16,21 +16,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <link rel="stylesheet" href="/css/jordan.css">
 </head>
 <body>
-<div class="navbar">
-  <a href="logout.php">Logout</a>
-  <a href = "dashboard.php">Dashboard </a>
-  <a href = "addmatches.php"> Add Match Data</a>
-  <a href = "matches.html"> View Matches</a>
-  <a href = "editteams.php"> Add Team Data</a>
-  <a href = "https://github.com/Lmello1/bullbots"> GitHub </a>
-
-
-</div>
-<div class="main">
-<br>
-<br>
 <h1>Welcome <?php echo htmlspecialchars($_SESSION["username"]); ?></h1>
 <h1>All teams</h1>
+<a href="logout.php">Logout</a>
+<br>
+<br>
+  <a href = "dashboard.php">Dashboard </a>
+  <br>
+<br>
+  <a href = "addmatches.php"> Add Match Data</a>
+  <br>
+<br>
+  <a href = "matches.html"> View Matches</a>
+  <br>
+<br>
+  <a href = "editteams.php"> Add Team Data</a>
+  <br>
+<br>
+  <a href = "https://github.com/Lmello1/bullbots"> GitHub </a>
+  <br>
+<br>
 <?php
 
 require_once('../mysqli_connect.php');
@@ -57,6 +62,5 @@ mysqli_close($dbc);
 ?>
 <br>
 <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Click here to delete all data </a>
-</div>
 </center>
 </body>

@@ -20,23 +20,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 <form action="./editteams.php" method="post">
   Team number:<br>
-  <input type="number" name="teamNum" value="118"><br>
+  <input type="number" name="teamNum"><br>
   Team name:<br>
-  <input type="text" name="teamName" value="Bullbots"><br>
+  <input type="text" name="teamName"><br>
   Hab Start level:<br>
-  <input type="number" name="lvl2Start" value="2"><br>
+  <input type="number" name="lvl2Start"><br>
   Ball levels:<br>
-  <input type="text" name="ballLevels" value="1,2,3,4"><br>
+  <input type="text" name="ballLevels"><br>
   Hatch levels:<br>
-  <input type="text" name="hatchLevels" value=1,2,3,4><br>
+  <input type="text" name="hatchLevels"><br>
   Gear ratio:<br>
-  <input type="text" name="gearRatio" value="1:10"><br>
+  <input type="text" name="gearRatio"><br>
   Motor types:<br>
-  <input type="text" name="mtrTypes" value="cim"><br>
+  <input type="text" name="mtrTypes"><br>
   Number of motors:<br>
-  <input type="number" name="mtrNum" value="4"><br>
+  <input type="number" name="mtrNum"><br>
   Practice time:<br>
-  <input type="text" name="practiceTime" value="0"><br>
+  <input type="text" name="practiceTime"><br>
   <br>
   <input type="submit" value="submit" name="submit">
 </form>
