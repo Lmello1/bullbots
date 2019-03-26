@@ -1,8 +1,8 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/jordan.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../css/jordan.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <center>
     <h1>Welcome to the Bullbots live dashboard</h1>
@@ -18,7 +18,7 @@
         <td>Win/Loss/tie</td>
 	<td>
 <?php
-require_once('../mysqli_connect.php');
+require_once('../../mysqli_connect.php');
 
 $winQuery = 'SELECT COUNT(*) wins FROM matches m LEFT JOIN performances p ON m.MatchNum = p.MatchID WHERE p.TeamNum = 1891 AND ((p.Color="red" AND m.RedScore > m.BlueScore) OR (p.Color="blue" AND m.BlueScore > m.RedScore))';
 

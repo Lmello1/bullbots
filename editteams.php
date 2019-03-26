@@ -14,7 +14,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <h1> Input team data </h1>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/jordan.css">
+<link rel="stylesheet" href="../css/jordan.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
         $practiceTime = $_POST['practiceTime'];
 
         if(empty($data_missing)){
-                require_once('../mysqli_connect.php');
+                require_once('../../mysqli_connect.php');
                 $query = "UPDATE teams SET
                         TeamName = IfNull(?, TeamName),
                         LevelTwoStart = IfNull(?, LevelTwoStart),

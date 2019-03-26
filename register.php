@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "../mysqli_connect.php";
+require_once "../../mysqli_connect.php";
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
