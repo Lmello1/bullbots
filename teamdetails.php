@@ -14,7 +14,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 if(!empty($_GET['teamNum'])){
 $teamNum = $_GET['teamNum'];
-require_once('../mysqli_connect.php');
+require_once('../../mysqli_connect.php');
 
 $statQuery = "SELECT * FROM teams WHERE teamNum = ?";
 
@@ -25,7 +25,7 @@ $response1 = mysqli_stmt_get_result($statStmt);
 mysqli_stmt_close($statStmt);
 if($response1){
 
-	echo '<h3>Stats For Team ' . $teamNum . '</h3><br>';
+	echo '<h3>Stats For Team ' . $teamNum . '</h3><br><table>';
 	while($row = mysqli_fetch_array($response1)){
 		echo '<tr><td>Hab start</td><td>';
 		if($row['LevelTwoStart']==1){
@@ -57,5 +57,5 @@ mysqli_close($dbc);
 	echo "NOPE";
 }
 ?>
-<a href = "index.php"> Back </a>
+<a href = "teams.php"> Back </a>
 </center>
