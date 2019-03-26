@@ -26,20 +26,22 @@ mysqli_stmt_close($statStmt);
 if($response1){
 
 	echo '<h3>Stats For Team ' .$teamNum . '</h3><br>';
-	echo '<table><tr><td>Hab Start</td><td>Ball Levels</td><td>Hatch Levels</td><td>Climb Levels</td><td>Practice Time</td></tr>';
 	while($row = mysqli_fetch_array($response1)){
-		echo '<tr><td>';
+		echo '<tr><td>Hab start</td><td>';
 		if($row['LevelTwoStart']==1){
-			echo "Yes</td><td>";
+			echo "Yes</td></tr><tr>";
 		}else if($row['LevelTwoStart']==0){
-			echo "No</td><td>";
+			echo "No</td></tr><tr>";
 		}else{
-			echo "</td><td>";
+			echo "</td></tr><tr>";
 		}
-
-		echo $row['BallLevels'] . '</td><td>';
-		echo $row['HatchLevels'] . '</td><td>';
-		echo $row['ClimbLevels'] . '</td><td>';
+		echo "<td>Ball Levals</td><td>"
+		echo $row['BallLevels'] . '</td></tr><tr>';
+		echo "<td>Hatch Levels</td><td>"
+		echo $row['HatchLevels'] . '</td></tr><tr>';
+		echo "<td>Climb Levels</td><td>"
+		echo $row['ClimbLevels'] . '</td></tr><tr>';
+		echo "<td>Practice Time</td><td>"
 		echo $row['PracticeTime'] . '</td></tr>';
 	}
 	echo '</table>';
