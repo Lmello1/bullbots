@@ -99,10 +99,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <center>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="css/jordan.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
-        body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
+        body {background-color: rgb(37, 37, 37);}
     </style>
 </head>
 <body>
