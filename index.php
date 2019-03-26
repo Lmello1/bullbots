@@ -33,6 +33,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <a href = "editteams.php"> Add Team Data</a>
   <br>
 <br>
+  <a href = "addteam.php"> Add Team</a>
+  <br>
+  <br>
   <a href = "https://github.com/Lmello1/bullbots"> GitHub </a>
   <br>
 <br>

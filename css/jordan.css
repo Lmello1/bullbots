@@ -6,7 +6,14 @@ h1 {
 font-family:robot;
 font-weight:normal;
 font-size:50;
+color: white;
 font-style:bold;
+}
+p, .h2, .h3, .h4, .h5, .h6, .form {
+  color: white;
+}
+form {
+  color: white;
 }
 td {
 font-family:robot;
@@ -75,3 +82,4 @@ table, th, td {
   list-style-type:none;
   padding:0 15px;
 }
+body {background-color: rgb(37, 37, 37);}
