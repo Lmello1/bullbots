@@ -1,8 +1,8 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/jordan.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="css/jordan.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <center>
     <h1>Welcome to the Bullbots live dashboard</h1>
@@ -15,8 +15,7 @@
     <h3>Stats at a glance</h3>
     <table>
     <tr>
-        <td>Win/Loss/tie</td>
-	<td>
+    <td>Win/Loss/tie</td>
 <?php
 require_once('../../mysqli_connect.php');
 
@@ -27,7 +26,7 @@ $winResponse = @mysqli_query($dbc, $winQuery);
 if($winResponse){
 	while($row = mysqli_fetch_array($winResponse)){
 		$wins = $row['wins'];
-		echo $wins . '/';
+		echo '<td>' . $wins . '/';
 	}
 }
 
